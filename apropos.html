@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Nexelium Tech</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- boxicon -->
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+  <!-- Bouton "Retour en haut" : HTML + style + script -->
+  <button id="backToTop" aria-label="Retour en haut" title="Retour en haut" type="button">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5l-7 7h4v7h6v-7h4l-7-7z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  
+
+  <script>
+    (function(){
+      var btn = document.getElementById('backToTop');
+      if(!btn) return;
+      // montrer / cacher selon le scroll
+      var onScroll = function(){
+        if(window.scrollY > 300) btn.classList.add('show');
+        else btn.classList.remove('show');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      // clic -> scroll smooth vers le haut
+      btn.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      // accessible via clavier (Enter / Space)
+      btn.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); btn.click(); }
+      });
+      // init visibility
+      onScroll();
+    })();
+  </script>
+
+<body>
+  <div class="hero_area">
+    <!-- header section  -->
+    <header class="header_sections">
+      
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/nexlium_ori-removebg-preview (1).png" class="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="apropos.html"> Apropos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      
+      <section class="main-section">
+            <article class="article">
+                <div class="article_img">
+                    <img src="images/groupe-d-etude-du-peuple-africain.jpg" alt="">
+                </div>
+                <div class="article_text">
+                    <h2>Nos actions d'urgences</h2>
+                    <p> Nous accompagnons les entreprises dans la définition de sa stratégie en ligne, la création ou refonte de son site web, le développement de son image de marque,
+                       ainsi que la gestion de sa présence sur les réseaux sociaux.
+                    </p>
+                </div>
+            </article>
+            <div class="mission-content reveal">
+                <h2>Notre Mission</h2>
+                <div class="mission-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="12">3</div>
+                        <div class="stat-label">Ans d'expérience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="250">27</div>
+                        <div class="stat-label">Projets réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">30</div>
+                        <div class="stat-label">Clients satisfaits</div>
+                    </div>
+                </div>
+                <p>Nous nous engageons à fournir des solutions innovantes et personnalisées qui répondent aux besoins uniques de nos clients. 
+                  Notre approche collaborative nous permet de créer des résultats exceptionnels qui dépassent les attentes.</p>
+            </div>
+      </section> 
+
+      <!-- Section Équipe -->
+        <section class="team-section">
+            <h2 class="reveal">Notre Équipe</h2>
+            <p class="section-subtitle reveal">Des professionnels passionnés à votre service</p>
+            
+            <div class="team-members">
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="" alt="Membre d'équipe">
+                        <div class="social-links">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="#"><i class='bx bxs-envelope'></i></a>
+                        </div>
+                    </div>
+                    <h3>Mohamed Almoubarak</h3>
+                    <p class="position">chef Créative</p>
+                    <p class="bio">Spécialiste en Design Graphic UX/UI dans la création de contenu et d'interfaces intuitives.</p>
+                </div>
+                
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="" alt="Membre d'équipe">
+                        <div class="social-links">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="#"><i class='bx bxs-envelope'></i></a>
+                        </div>
+                    </div>
+                    <h3>nom et prenom</h3>
+                    <p class="position">Développeur Web et Desktop</p>
+                    <p class="bio">Spécialiste en technologies front-end et back-end, passionné par les solutions techniques élégantes.</p>
+                </div>
+                
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="" alt="Membre d'équipe">
+                        <div class="social-links">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="#"><i class='bx bxs-envelope'></i></a>
+                        </div>
+                    </div>
+                    <h3>nom et prenom</h3>
+                    <p class="position">Chef de Projet</p>
+                    <p class="bio">Gestionnaire de projets aguerrie, elle veille au bon déroulement de toutes nos initiatives.</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+  </section>
+
+  <!-- Section Valeurs -->
+        <section class="values-section">
+            <h2 class="reveal">Nos Valeurs</h2>
+            <p class="section-subtitle reveal">Les principes qui guident notre travail</p>
+            
+            <div class="values-grid">
+                <div class="value-card reveal">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Nous repoussons constamment les limites pour offrir des solutions créatives et avant-gardistes.</p>
+                </div>
+                
+                <div class="value-card reveal">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Intégrité</h3>
+                    <p>Nous maintenons des standards éthiques élevés dans toutes nos interactions et décisions.</p>
+                </div>
+                
+                <div class="value-card reveal">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>Nous croyons que les meilleurs résultats naissent du travail d'équipe et du partage des idées.</p>
+                </div>
+                
+                <div class="value-card reveal">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>Nous visons la perfection dans chaque détail pour délivrer une qualité irréprochable.</p>
+                </div>
+            </div>
+        </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <h4>
+        Entrer en contact
+      </h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      En Ligne
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      00227 70 08 70 61
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      contactnexeliumtech@gmail.com
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="">
+          <i class='bx bxl-facebook'></i>
+        </a>
+        <a href="">
+          <i class='bx bxl-youtube'></i>
+        </a>
+        <a href="">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+        <a href="">
+          <i class='bx bxl-instagram'></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> Tous droits réservés par 
+        <a href="https://html.design/">Nexelium Tech</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+  <!-- script custom apropos -->
+
+   
+  
+
+</body>
+
+</html>
