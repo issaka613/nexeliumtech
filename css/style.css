@@ -95,7 +95,7 @@ a:focus {
     text-align: center;
   letter-spacing: -0.2px;
 }
-.contact .heading span { color: #7a1d82; }
+.contact .heading span { color: #010f70; }
 
 /* Form container */
 .contact form {
@@ -191,7 +191,7 @@ a:focus {
 /*header section*/
 .hero_area {
   position: relative;
-  background-color: #d1e3ff;
+  background-color: #010f70;
 }
 
 .header_section .container-fluid {
@@ -205,7 +205,7 @@ a:focus {
 
 .header_section .header_top {
   padding: 15px 0;
-  background-color: #7a1d82;
+  background-color: #010f70;
 }
 .header_sections .header_top {
   padding: 15px 0;
@@ -233,7 +233,7 @@ a:focus {
   color: #ffffff;
 }
 .header_sections .header_top .contact_nav a {
-  color: #7a1d82;
+  color: #010f70;
 }
 
 .header_section .header_top .contact_nav a i {
@@ -259,7 +259,7 @@ a:focus {
 }
 
 .navbar-brand span {
-  color: #6f2277;
+  color: #010f70;
   text-transform: uppercase;
 }
 
@@ -273,12 +273,12 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 10px 25px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #6f2277;
+  color: #ff7a16;
 }
 
 .custom_nav-container .form-inline .nav_search-btn {
@@ -286,11 +286,11 @@ a:focus {
   height: 35px;
   padding: 0;
   border: none;
-  color: #000000;
+  color: #ffffff;
 }
 
 .custom_nav-container .form-inline .nav_search-btn:hover {
-  color: #6f2277;
+  color: #ff7a16;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -412,9 +412,21 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url('../images/un-groupe-de-personnes-occupees-multinationales-travaillant-au-bureau.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
+  position: relative;
 }
+
+.slider_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(1, 15, 112, 0.5);
+  z-index: 0;
+}
+
+
 
 .slider_section .row {
   -webkit-box-align: center;
@@ -442,7 +454,7 @@ a:focus {
 }
 
 .slider_section .detail-box p {
-  color: #444;
+  color: #ffffff;
   font-size: 20px;
 }
 
@@ -512,13 +524,13 @@ a:focus {
   width: 100%;
   height: auto;
   max-height: 100%;
-  fill: #726dae;
+  fill: #ff7a16;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .feature_section .feature_container .box .img-box svg path {
-  fill: #726dae;
+  fill: #ff7a16;
 }
 
 .feature_section .feature_container .box .name {
@@ -530,15 +542,15 @@ a:focus {
 
 .feature_section .feature_container .box:hover, .feature_section .feature_container .box.active {
   background-color: #ff7a16;
-  color: #ffffff;
+  color: #010f70;
 }
 
 .feature_section .feature_container .box:hover .img-box svg, .feature_section .feature_container .box.active .img-box svg {
-  fill: #ffffff;
+  fill: #010f70;
 }
 
 .feature_section .feature_container .box:hover .img-box svg path, .feature_section .feature_container .box.active .img-box svg path {
-  fill: #ffffff;
+  fill: #010f70;
 }
 
 /* about */
@@ -619,7 +631,7 @@ a:focus {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #7b1b86;
+    color: #010f70;
     margin-bottom: 0.5rem;
 }
 .stat-label {
@@ -694,7 +706,7 @@ a:focus {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #7c1c87;
+    background: #010f70;
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -725,7 +737,7 @@ a:focus {
 }
 
 .team-member .position {
-    color: #7c1c87;
+    color: #ff7a16;
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 15px;
@@ -770,7 +782,7 @@ a:focus {
 }
 
 .value-card:hover {
-    background: #7b1b86;
+    background: #ff7a16;
     transform: translateY(-10px);
 }
 
@@ -782,7 +794,7 @@ a:focus {
 
 .value-icon {
     font-size: 2.5rem;
-    color: #7b1b86;
+    color: #010f70;
     margin-bottom: 20px;
     transition: color 0.3s;
 }
@@ -1117,8 +1129,8 @@ a:focus {
 }
 /* contact2 */
 :root {
-    --primary-color: #7a1d82;
-    --secondary-color: #3a0ca3;
+    --primary-color: #010f70;
+    --secondary-color: rgb(107, 57, 224);
     --accent-color: #f72585;
     --light-color: #f8f9fa;
     --dark-color: #212529;
@@ -1153,7 +1165,7 @@ a:focus {
 .contact-header h1 {
     font-size: 2.2rem;
     font-weight: 600;
-    color: #7a1d82;
+    color: #010f70;
     margin-bottom: 10px;
 }
 
@@ -1343,7 +1355,7 @@ a:focus {
 
 .info_section a {
   margin: 0 5px;
-  color: #742082;
+  color: #0a0f43;
 }
 
 .info_section a i {
@@ -1381,7 +1393,7 @@ a:focus {
   background-position: center;
   text-align: center;
   line-height: 80px;
-  background-color: #742082;
+  background-color: #0a0f43;
   color: #ffffff;
 }
 
