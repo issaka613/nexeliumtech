@@ -480,8 +480,10 @@ a:focus {
 }
 
 .feature_section {
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: none;
+          transform: none;
+  margin-top: 10px;
+  margin-bottom: 45px;
 }
 
 .feature_section .feature_container {
