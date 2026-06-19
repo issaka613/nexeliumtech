@@ -447,6 +447,7 @@ a:focus {
   font-weight: bold;
   font-size: 45px;
   margin-bottom: 25px;
+  margin-top: 65px;
   color: #ffffff;
 }
 .slider_section .detail-box h1 span{
@@ -459,7 +460,9 @@ a:focus {
 }
 
 .slider_section .detail-box a {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
   font-family: 'Merriweather Sans', sans-serif;
   text-transform: uppercase;
   padding: 10px 45px;
@@ -467,7 +470,6 @@ a:focus {
   border: 1px solid #ff7a16;
   border-radius: 5px;
   color: #ffffff;
-  margin-top: 15px;
 }
 
 .slider_section .detail-box a:hover {
@@ -817,8 +819,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          padding-bottom: 100px;
-          
+          padding-bottom: 50px;
 }
 
 .about_section .detail-box h2 {
@@ -857,6 +858,8 @@ a:focus {
 
 .professional_section {
   background-color: #d1e3ff;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .professional_section .row {
@@ -866,7 +869,7 @@ a:focus {
 }
 
 .professional_section .img-box img {
-  width: 100%;
+  width: 500px;
 }
 
 .professional_section .detail-box h2 {
