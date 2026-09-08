@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Community Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <!-- ══════════════ TOPBAR ══════════════ -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-map-marker-alt"></i> Niamey-Niger</span>
+      <span><i class="fas fa-envelope"></i> contactnexeliumtech@gmail.com</span>
+    </div>
+    <div class="topbar-right">
+      <span><i class="fas fa-clock"></i>Ouverture : de 09h à 23h</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar">
+    <a href="site_nexelium.html" class="logo">
+      <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+      <div class="logo-text">
+        <strong>Nexelium Tech</strong>
+        <span>Entreprise numérique</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="site_nexelium.html" class="active">Accueil</a></li>
+      <li><a href="#about">A propos de nous</a></li>
+      <li><a href="#services">Service</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Nous contacter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <i class="fas fa-phone-alt"></i>
+      <span>+227 95 98 91 96</span>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+<!-- ══════════════ service community ══════════════ -->
+<section class="herose">
+    <div class="herose-eyebrow"><span class="pulse-dot"></span>Disponible pour de nouveaux comptes</div>
+    <h1>Vos réseaux, <em>animés</em> et suivis au quotidien.</h1>
+    <p>Stratégie, contenu, modération et analyse : cliquez sur une prestation pour voir le détail (fréquence, formats, idéal pour).</p>
+  </section>
+
+  <nav class="filters" id="filters">
+    <button class="filter-btn active" data-filter="tous">Tous</button>
+    <button class="filter-btn" data-filter="strategie">Stratégie</button>
+    <button class="filter-btn" data-filter="contenu">Contenu</button>
+    <button class="filter-btn" data-filter="moderation">Modération</button>
+    <button class="filter-btn" data-filter="analyse">Analyse</button>
+  </nav>
+
+  <main class="gallery" id="gallery"></main>
+
+  <section class="contacter">
+    <div>
+      <h2>On lance votre stratégie ?</h2>
+      <p>Un échange de 20 min pour cerner vos besoins et vous proposer un plan.</p>
+    </div>
+  </section>
+
+<script>
+const services = [
+  {
+    icon:"S", title:"Stratégie de contenu", stat:"1 plan / mois",
+    desc:"Ligne éditoriale et positionnement adaptés à votre audience.",
+    cat:"strategie", accent:"var(--violet)",
+    formats:"Document stratégique + plan d'action", frequence:"Révision mensuelle", ideal:"Nouveau compte ou repositionnement"
+  },
+  {
+    icon:"C", title:"Calendrier éditorial", stat:"4 sem. à l'avance",
+    desc:"Planification des publications sur toutes vos plateformes.",
+    cat:"strategie", accent:"var(--violet)",
+    formats:"Calendrier partagé (Notion/Sheets)", frequence:"Mise à jour hebdo", ideal:"Régularité de publication"
+  },
+  {
+    icon:"P", title:"Création de posts", stat:"5–7 posts / sem.",
+    desc:"Visuels et formats adaptés à chaque réseau social.",
+    cat:"contenu", accent:"var(--coral)",
+    formats:"Feed, stories, reels", frequence:"Selon calendrier", ideal:"Présence active et cohérente"
+  },
+  {
+    icon:"R", title:"Rédaction & copywriting", stat:"~200 mots / post",
+    desc:"Légendes et accroches qui donnent envie d'interagir.",
+    cat:"contenu", accent:"var(--coral)",
+    formats:"Légendes, hashtags, CTA", frequence:"Selon calendrier", ideal:"Engagement et clarté du message"
+  },
+  {
+    icon:"M", title:"Modération & DM", stat:"< 2h de réponse",
+    desc:"Réponses aux commentaires et messages privés.",
+    cat:"moderation", accent:"var(--mint)",
+    formats:"Réponses personnalisées", frequence:"Quotidienne", ideal:"Relation client, service après-vente"
+  },
+  {
+    icon:"V", title:"Veille & gestion de crise", stat:"Suivi 7j/7",
+    desc:"Surveillance de votre e-réputation et réaction rapide.",
+    cat:"moderation", accent:"var(--mint)",
+    formats:"Rapport d'alerte + plan de réponse", frequence:"Continue", ideal:"Marques exposées, forte audience"
+  },
+  {
+    icon:"A", title:"Reporting de performance", stat:"12 indicateurs",
+    desc:"Analyse de la portée, l'engagement et la croissance.",
+    cat:"analyse", accent:"var(--coral)",
+    formats:"Rapport PDF illustré", frequence:"Mensuel", ideal:"Suivi de résultats, ajustement stratégie"
+  },
+  {
+    icon:"$", title:"Campagnes sponsorisées", stat:"Budget géré",
+    desc:"Mise en place et suivi de publicités ciblées.",
+    cat:"analyse", accent:"var(--coral)",
+    formats:"Campagnes Meta / TikTok Ads", frequence:"Selon objectifs", ideal:"Accélérer visibilité, générer des leads"
+  }
+];
+
+const gallery = document.getElementById('gallery');
+
+services.forEach((s, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.cat = s.cat;
+  card.style.transitionDelay = (i * 40) + 'ms';
+  card.style.setProperty('--accent', s.accent);
+
+  card.innerHTML = `
+    <div class="card-top">
+      <div class="badge">${s.icon}</div>
+      <div class="stat-mini"><b>${s.stat}</b><br>en moyenne</div>
+    </div>
+    <div class="card-title">${s.title}</div>
+    <p class="card-desc">${s.desc}</p>
+    <div class="card-tag">${s.cat}</div>
+    <div class="card-details">
+      <div class="details-inner">
+        <ul class="spec-list">
+          <li><b>Formats</b><span>${s.formats}</span></li>
+          <li><b>Fréquence</b><span>${s.frequence}</span></li>
+          <li><b>Idéal pour</b><span>${s.ideal}</span></li>
+        </ul>
+        <a class="cta-mini" href="mailto:contact@votre-cm.com?subject=Devis%20-%20${encodeURIComponent(s.title)}" onclick="event.stopPropagation()">Demander un devis</a>
+      </div>
+    </div>
+    <div class="expand-hint" style="margin-top:12px;">détails ↓</div>
+  `;
+
+  const hint = card.querySelector('.expand-hint');
+  card.setAttribute('aria-expanded', 'false');
+
+  card.addEventListener('click', () => {
+    const isOpen = card.classList.contains('expanded');
+
+    document.querySelectorAll('.card').forEach(item => {
+      item.classList.remove('expanded');
+      item.setAttribute('aria-expanded', 'false');
+      const itemHint = item.querySelector('.expand-hint');
+      if (itemHint) itemHint.textContent = 'détails ↓';
+    });
+
+    if (!isOpen) {
+      card.classList.add('expanded');
+      card.setAttribute('aria-expanded', 'true');
+      if (hint) hint.textContent = 'masquer ↑';
+    }
+  });
+
+  gallery.appendChild(card);
+});
+
+// Filtres
+document.getElementById('filters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.card').forEach(card => {
+    const show = filter === 'tous' || card.dataset.cat === filter;
+    card.classList.toggle('hidden', !show);
+  });
+});
+
+// Apparition au scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.card').forEach(card => observer.observe(card));
+</script>
+
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Contactez nous</span>
+        <h2 class="section-title white">Traivaillons ensemble</h2>
+        <p class="contact-desc">Prêt pour transformer votre business avec les nouvelles technologies ? Laissez-nous nous en occuper pour vous.</p>
+        <div class="contact-details">
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Niamey-Niger</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>contactnexeliumtech@gmail.com</span></div>
+          <div class="contact-item"><i class="fas fa-phone"></i><span>+227 95 98 91 96</span></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><span>H24</span></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Votre nom</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Adress email</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Sujet</label>
+          <input type="text" placeholder="Comment pouvons-nous vous aider ?" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Dites nous à propos de votre projet..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          Envoyer le message <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i> Message envoyé avec succès! Nous vous repondrons bientôt.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+          <div class="logo-text">
+            <strong>Nexelium Tech</strong>
+            <span>Entreprise numérique</span>
+          </div>
+        </a>
+        <p>Des solutions informatiques intelligentes et évolutives pour aider votre entreprise à se développer, à innover et à réussir à l'ère du numérique.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Développement de logiciels</a></li>
+          <li><a href="#">Solutions cloud</a></li>
+          <li><a href="#">Design UI/UX</a></li>
+          <li><a href="#">Transformation numérique</a></li>
+          <li><a href="#">Conseil en informatique</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Restez informé de nos dernières actualités et offres.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button class="btn btn-primary">S'abonner</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tous droits réservés par Nexelium Tech.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

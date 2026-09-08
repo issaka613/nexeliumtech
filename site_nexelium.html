@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nexelium Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <!-- ══════════════ TOPBAR ══════════════ -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-map-marker-alt"></i> Niamey-Niger</span>
+      <span><i class="fas fa-envelope"></i> contactnexeliumtech@gmail.com</span>
+    </div>
+    <div class="topbar-right">
+      <span><i class="fas fa-clock"></i>Ouverture : de 09h à 23h</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar">
+    <a href="Logo Nexelium tech.png" class="logo">
+      <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+      <div class="logo-text">
+        <strong>Nexelium Tech</strong>
+        <span>Entreprise numérique</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="active">Accueil</a></li>
+      <li><a href="#about">A propos de nous</a></li>
+      <li><a href="#services">Service</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Nous contacter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <i class="fas fa-phone-alt"></i>
+      <span>+227 95 98 91 96</span>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-particles" id="particles"></div>
+
+    <div class="hero-content">
+      <p class="hero-tag">Développer votre entreprise</p>
+      <h1>Solutions numérique & branding<span> adaptés </span><br>pour votre business</h1>
+      <p class="hero-desc">Nous vous aidons à construire une image de marque et à développer votre productivité grâce à des visuels professionnels et un système de gestion automatisé sur mesure.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-outline">Contactez nous <i class="fas fa-arrow-right"></i></a>
+        <a href="#services" class="btn btn-ghost">Nos services  </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="gear-bg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="gear-spin">
+          <path d="M150 60 L162 42 L180 58 L200 46 L202 68 L224 72 L220 94 L240 106 L228 126 L240 146 L220 158 L224 180 L202 184 L200 206 L180 194 L162 210 L150 192 L138 210 L120 194 L100 206 L98 184 L76 180 L80 158 L60 146 L72 126 L60 106 L80 94 L76 72 L98 68 L100 46 L120 58 Z" fill="rgba(30,144,255,0.12)" stroke="rgba(30,144,255,0.45)" stroke-width="1.5"/>
+          <circle cx="150" cy="126" r="36" fill="rgba(30,144,255,0.08)" stroke="rgba(30,144,255,0.5)" stroke-width="1.5"/>
+        </g>
+        <g class="gear-spin-rev" style="transform-origin:222px 205px">
+          <path d="M222 172 L230 158 L242 166 L252 156 L252 172 L266 176 L262 190 L274 198 L266 210 L274 222 L262 226 L266 240 L252 244 L252 260 L242 250 L230 258 L222 244 L214 258 L202 250 L202 244 L188 240 L192 226 L180 222 L188 210 L180 198 L192 190 L188 176 L202 172 L202 156 L214 166 Z" fill="rgba(0,212,255,0.08)" stroke="rgba(0,212,255,0.35)" stroke-width="1"/>
+          <circle cx="222" cy="208" r="22" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.38)" stroke-width="1"/>
+        </g>
+        <line x1="150" y1="126" x2="222" y2="208" stroke="rgba(30,144,255,0.2)" stroke-width="1" stroke-dasharray="5 4"/>
+      </svg>
+
+      <div class="hero-img-box">
+        <div class="hero-img-inner">
+          <i class="fas fa-network-wired"></i>
+          <p>Entreprise numérique</p>
+          <div class="hero-ping"></div>
+        </div>
+      </div>
+
+      <div class="badge-exp">
+        <div class="badge-avatar"><i class="fas fa-user-tie"></i></div>
+        <div class="badge-info">
+          <div class="badge-num">15<span>+</span></div>
+          <div class="badge-label">Projets réalisés</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section class="about" id="about">
+    <div class="about-visual">
+      <div class="about-img-wrap">
+        <div class="about-img-box">
+          <i class="fas fa-users"></i>
+          <p>Notre équipe de travail</p>
+        </div>
+        <div class="about-nav-arrows">
+          <button class="arrow-btn" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+          <button class="arrow-btn" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="about-stat-badge">
+        <div class="about-stat-num">1M<span>+</span></div>
+        <div class="about-stat-sub">Overall happy<br>Customers</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <span class="section-tag">A propos de nous</span>
+      <h2 class="section-title">Equipe d'expert dans le domaine du numérique<br>pour le développement de votre entreprise</h2>
+      <p class="section-desc">Aider les entreprises à se développer rapidement avec des expert dans leurs domaines et un support de développement</p>
+
+      <ul class="about-features">
+        <li><i class="fas fa-check-circle"></i> 7J/7 service clients disponible</li>
+        <li><i class="fas fa-check-circle"></i> Consultant hautement qualifié</li>
+        <li><i class="fas fa-check-circle"></i> Membres d'équipes experts</li>
+      </ul>
+
+      <div class="about-badges-row">
+        <div class="mini-badge">
+          <div class="mini-badge-icon blue"><i class="fas fa-certificate"></i></div>
+          <div class="mini-badge-text">
+            <strong>Entreprise certifié, avec le NIF et le RCCM</strong>
+            <p>Entreprise reconnu par les autorité compétente du Niger</p>
+          </div>
+        </div>
+       
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICES ══════════════ -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <span class="section-tag">Nos services</span>
+      <h2 class="section-title">Solutions digitale pour développer votre business.</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-img s1"><i class="fas fa-laptop-code"></i></div>
+        <div class="service-body">
+          <h3>Développement de solutions numérique sur mesure</h3>
+          <p>Nous développons des logiciels et sites web aligné à vos objectifs de business, en alliant performance, scalabilité et esthétique.</p>
+          <a href="developpement.html" class="service-link">Lire plus<i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img s2"><i class="fas fa-cloud"></i></div>
+        <div class="service-body">
+          <h3>Formations dans le digital</h3>
+          <p>Nous assurons une formation dans la maitrise du digital et de l'informatique.</p>
+          <a href="formation digitale.html" class="service-link">Lire plus <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img s3"><i class="fas fa-palette"></i></div>
+        <div class="service-body">
+          <h3>Infographie</h3>
+          <p>Concevoir des infographies professionnels et percutants pour vous donner une image de marque très professionnel.Deliver intuitive and engaging digital experiences with clean, user-friendly interface design tailored to your audience.</p>
+          <a href="service infographie.html" class="service-link">Lire plus <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img s4"><i class="fas fa-microchip"></i></div>
+        <div class="service-body">
+          <h3>Community management</h3>
+          <p>Nous gérons vos reseaux sociaux afin de construire une communauté de qualité autour des valeurs de votre entreprise tout en augmentant votre crédibilitant et votre visibilité.</p>
+          <a href="service communty.html" class="service-link">Lire plus <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════ STATS ══════════════ -->
+  <section class="stats" id="stats">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num" data-count="30">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label">Projets terminés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="5">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label">Membres d'équipe</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="2">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label">ans d'expériance</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="80">0</div>
+        <div class="stat-plus">%</div>
+        <div class="stat-label">Clients satisfait</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TESTIMONIALS ══════════════ -->
+  <section class="testimonials">
+    <div class="testimonials-header">
+      <span class="section-tag">Temoignages</span>
+      <h2 class="section-title">Ce que nos clients disent</h2>
+    </div>
+    <div class="testimonials-track" id="testSlider">
+      <div class="testimonial-card active">
+        <div class="stars">★★★★★</div>
+        <p>"Bon boulot Nexelium Tech. Je suis satisfaite du travail à 100%. Je n'hésiterai pas à revenir in sha Allah. Merci beaucoup."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div class="author-info">
+            <strong>Madame Atou</strong>
+            <span>CEO Atou'cake</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Je suis vraiment satisfait des visuels que vous avez conçu pour moi. Merci beaucoup vraimentt. On garde le contact pour d'éventuels contrats."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div class="author-info">
+            <strong>M. Moussa Maman Hassan</strong>
+            <span>PDG Mounio Global Business</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Waouhh ! Ma sha Allah c'est vraiment jolie. Merci beaucoup vraiment."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div class="author-info">
+            <strong>Mademoiselle Anissa</strong>
+            <span>PDG Nissamour beauty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-dots" id="sliderDots">
+      <span class="dot active" data-i="0"></span>
+      <span class="dot" data-i="1"></span>
+      <span class="dot" data-i="2"></span>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Contactez nous</span>
+        <h2 class="section-title white">Traivaillons ensemble</h2>
+        <p class="contact-desc">Prêt pour transformer votre business avec les nouvelles technologies ? Laissez-nous nous en occuper pour vous.</p>
+        <div class="contact-details">
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Niamey-Niger</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>contactnexeliumtech@gmail.com</span></div>
+          <div class="contact-item"><i class="fas fa-phone"></i><span>+227 95 98 91 96</span></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><span>H24</span></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Votre nom</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Adress email</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Sujet</label>
+          <input type="text" placeholder="Comment pouvons-nous vous aider ?" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Dites nous à propos de votre projet..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          Envoyer le message <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i> Message envoyé avec succès! Nous vous repondrons bientôt.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════ FAQ ══════════════ -->
+  <section class="faq" id="faq">
+    <div class="faq-header">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Foire aux questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Quels services Nexelimu Tech propose-t-il ? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Nous proposons des services de développement de logiciels sur mesure, de solutions cloud, de conception UI/UX, de transformation numérique, de cybersécurité et de gestion de l'assistance informatique.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Combien de temps dure un projet type ?<i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Les délais de projet varient en fonction de la portée et de la complexité. Une application web simple peut nécessiter 4 à 8 semaines, tandis que les solutions d'entreprise peuvent prendre de 3 à 12 mois.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Proposez-vous un suivi après le lancement ? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Absolument. Nous proposons des formules d'assistance 24h/24 et 7j/7, des plans de maintenance ainsi que des chargés de compte dédiés à tous nos clients après le lancement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Pouvez-vous collaborer avec notre équipe informatique existante ? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Oui ! Nous sommes spécialisés dans le renforcement d'équipes. Nos experts s'intègrent parfaitement à votre équipe et à vos processus actuels pour maximiser la productivité.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+          <div class="logo-text">
+            <strong>CodeNova</strong>
+            <span>Solutions</span>
+          </div>
+        </a>
+        <p>Des solutions informatiques intelligentes et évolutives pour aider votre entreprise à se développer, à innover et à réussir à l'ère du numérique.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Développement de logiciels</a></li>
+          <li><a href="#">Solutions cloud</a></li>
+          <li><a href="#">Design UI/UX</a></li>
+          <li><a href="#">Transformation numérique</a></li>
+          <li><a href="#">Conseil en informatique</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Restez informé de nos dernières actualités et offres.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button class="btn btn-primary">S'abonner</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tous droits réservés par Nexelium Tech.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

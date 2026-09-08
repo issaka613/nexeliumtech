@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formation digitale</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <!-- ══════════════ TOPBAR ══════════════ -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-map-marker-alt"></i> Niamey-Niger</span>
+      <span><i class="fas fa-envelope"></i> contactnexeliumtech@gmail.com</span>
+    </div>
+    <div class="topbar-right">
+      <span><i class="fas fa-clock"></i>Ouverture : de 09h à 23h</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar">
+    <a href="site_nexelium.html" class="logo">
+      <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+      <div class="logo-text">
+        <strong>Nexelium Tech</strong>
+        <span>Entreprise numérique</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="site_nexelium.html" class="active">Accueil</a></li>
+      <li><a href="#about">A propos de nous</a></li>
+      <li><a href="#services">Service</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Nous contacter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <i class="fas fa-phone-alt"></i>
+      <span>+227 95 98 91 96</span>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+ <!-- ══════════════ sercices formation ══════════════ -->
+<main class="formation-page">
+  <section class="hero">
+    <div class="eyebrow">Formation digitale — Niamey, Niger</div>
+    <h1>NOS SERVICES EN<br><span>FORMATION DIGITALE</span></h1>
+    <p>Nexelium Tech classe ses formations comme les éléments d'une table périodique : regroupées par famille, identifiables en un coup d'œil, prêtes à se combiner selon vos besoins.</p>
+    <a href="#formations" class="cta">Explorer les formations →</a>
+  </section>
+
+  <div class="legend-wrap">
+    <div class="legend-title">Familles de formation</div>
+    <div class="legend" id="legend" role="group" aria-label="Filtrer par famille"></div>
+  </div>
+
+  <section id="formations">
+    <div class="grid" id="grid"></div>
+    <p class="empty-msg" id="emptyMsg">Aucune formation dans cette famille pour le moment.</p>
+  </section>
+
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+      <div class="modal-top">
+        <div>
+          <span class="modal-symbol" id="modalSymbol">Nx</span>
+          <span class="cat-label" id="modalCat">Catégorie</span>
+        </div>
+        <button type="button" class="modal-close" id="modalClose" aria-label="Fermer la fenêtre">×</button>
+      </div>
+      <h3 id="modalTitle">Titre de formation</h3>
+      <p class="desc" id="modalDesc">Détail de la formation sélectionnée.</p>
+      <div class="facts">
+        <div class="fact"><span class="fact-label">Durée</span><span class="fact-value" id="modalDuree">-</span></div>
+        <div class="fact"><span class="fact-label">Niveau</span><span class="fact-value" id="modalNiveau">-</span></div>
+        <div class="fact"><span class="fact-label">Format</span><span class="fact-value" id="modalFormat">-</span></div>
+        <div class="fact"><span class="fact-label">Certificat</span><span class="fact-value" id="modalCert">-</span></div>
+      </div>
+      <button type="button" class="btn btn-primary full-width" id="modalCTA">Réserver cette formation</button>
+    </div>
+  </div>
+</main>
+
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Contactez nous</span>
+        <h2 class="section-title white">Traivaillons ensemble</h2>
+        <p class="contact-desc">Prêt pour transformer votre business avec les nouvelles technologies ? Laissez-nous nous en occuper pour vous.</p>
+        <div class="contact-details">
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Niamey-Niger</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>contactnexeliumtech@gmail.com</span></div>
+          <div class="contact-item"><i class="fas fa-phone"></i><span>+227 95 98 91 96</span></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><span>H24</span></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Votre nom</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Adress email</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Sujet</label>
+          <input type="text" placeholder="Comment pouvons-nous vous aider ?" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Dites nous à propos de votre projet..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          Envoyer le message <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i> Message envoyé avec succès! Nous vous repondrons bientôt.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+          <div class="logo-text">
+            <strong>Nexelium Tech</strong>
+            <span>Entreprise numérique</span>
+          </div>
+        </a>
+        <p>Des solutions informatiques intelligentes et évolutives pour aider votre entreprise à se développer, à innover et à réussir à l'ère du numérique.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Développement de logiciels</a></li>
+          <li><a href="#">Solutions cloud</a></li>
+          <li><a href="#">Design UI/UX</a></li>
+          <li><a href="#">Transformation numérique</a></li>
+          <li><a href="#">Conseil en informatique</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Restez informé de nos dernières actualités et offres.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button class="btn btn-primary">S'abonner</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tous droits réservés par Nexelium Tech.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

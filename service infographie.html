@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Infographie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <!-- ══════════════ TOPBAR ══════════════ -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-map-marker-alt"></i> Niamey-Niger</span>
+      <span><i class="fas fa-envelope"></i> contactnexeliumtech@gmail.com</span>
+    </div>
+    <div class="topbar-right">
+      <span><i class="fas fa-clock"></i>Ouverture : de 09h à 23h</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar">
+    <a href="site_nexelium.html" class="logo">
+      <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+      <div class="logo-text">
+        <strong>Nexelium Tech</strong>
+        <span>Entreprise numérique</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="site_nexelium.html" class="active">Accueil</a></li>
+      <li><a href="#about">A propos de nous</a></li>
+      <li><a href="#services">Service</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Nous contacter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <i class="fas fa-phone-alt"></i>
+      <span>+227 95 98 91 96</span>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+<!-- ══════════════ service infographie ══════════════ -->
+<section class="heros">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="heros-eyebrow">Studio d'infographie — Niamey</div>
+        <h1>SERVICES<br>D'<span>INFOGRAPHIE</span></h1>
+        <p>Identité visuelle, supports imprimés et visuels digitaux. Chaque prestation ci-dessous est présentée comme une fiche : cliquez pour voir formats, délais et tarifs indicatifs.</p>
+      </div>
+      <div class="hero-panel" aria-label="Statistiques du studio">
+        <div class="panel-top">
+          <span class="mini-badge">Création visuelle</span>
+          <span class="mini-dot"></span>
+        </div>
+        <div class="panel-number">120+</div>
+        <p>Visuels conçus pour des marques et entreprises locales.</p>
+        <div class="panel-grid">
+          <div>
+            <strong>48h</strong>
+            <span>Devis</span>
+          </div>
+          <div>
+            <strong>3x</strong>
+            <span>Plus d'engagement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="filters" id="filters">
+    <button class="filter-btn active" data-filter="tous">Tous</button>
+    <button class="filter-btn" data-filter="identite">Identité</button>
+    <button class="filter-btn" data-filter="print">Print</button>
+    <button class="filter-btn" data-filter="digital">Digital</button>
+  </nav>
+
+  <main class="gallery" id="gallery"></main>
+
+  <section class="contacts">
+    <div>
+      <h2>Un projet en tête ?</h2>
+      <p>Parlons-en et je vous propose un devis adapté sous 48h.</p>
+    </div>
+  </section>
+
+<script>
+const services = [
+  {
+    code: "REF 01A", letter:"L", title:"Logo & identité visuelle",
+    desc:"Création de logo unique et déclinaisons pour votre marque.",
+    cat:"identite", catLabel:"Identité",
+    formats:"AI, EPS, PNG, SVG", delai:"5–8 jours", ideal:"Nouvelle marque"
+  },
+  {
+    code: "REF 02A", letter:"C", title:"Charte graphique",
+    desc:"Couleurs, typographies et règles d'usage cohérentes.",
+    cat:"identite", catLabel:"Identité",
+    formats:"PDF guide + fichiers sources", delai:"7–10 jours", ideal:"Structurer une marque"
+  },
+  {
+    code: "REF 03P", letter:"F", title:"Flyers & affiches",
+    desc:"Supports imprimés percutants pour vos évènements.",
+    cat:"print", catLabel:"Print",
+    formats:"A5, A4, A3 — 300 dpi", delai:"2–4 jours", ideal:"Promotions, évènements"
+  },
+  {
+    code: "REF 04P", letter:"V", title:"Cartes de visite",
+    desc:"Design professionnel prêt pour l'impression.",
+    cat:"print", catLabel:"Print",
+    formats:"85×55mm, fond perdu", delai:"1–2 jours", ideal:"Contacts pro"
+  },
+  {
+    code: "REF 05P", letter:"E", title:"Packaging & étiquettes",
+    desc:"Habillage produit adapté à votre gamme.",
+    cat:"print", catLabel:"Print",
+    formats:"Gabarit sur mesure", delai:"6–9 jours", ideal:"Produits, commerçants"
+  },
+  {
+    code: "REF 06D", letter:"S", title:"Visuels réseaux sociaux",
+    desc:"Posts, bannières et templates pour vos réseaux.",
+    cat:"digital", catLabel:"Digital",
+    formats:"Carré, story, bannière", delai:"2–3 jours", ideal:"Communication continue"
+  },
+  {
+    code: "REF 07D", letter:"B", title:"Bannières web",
+    desc:"Visuels optimisés pour sites et publicités en ligne.",
+    cat:"digital", catLabel:"Digital",
+    formats:"JPG, PNG, tailles standards", delai:"1–3 jours", ideal:"Sites, campagnes web"
+  },
+  {
+    code: "REF 08D", letter:"R", title:"Retouche photo",
+    desc:"Corrections et mise en valeur de vos images.",
+    cat:"digital", catLabel:"Digital",
+    formats:"JPG, PNG, TIFF", delai:"1–2 jours", ideal:"Photos produits, portraits"
+  }
+];
+
+const accentByCat = { identite: 'var(--amber)', print: 'var(--teal)', digital: 'var(--magenta)' };
+
+const gallery = document.getElementById('gallery');
+
+services.forEach((s, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.cat = s.cat;
+  card.style.transitionDelay = (i * 40) + 'ms';
+
+  card.innerHTML = `
+    <div class="card-inner">
+      <div class="card-face card-front" style="--accent:${accentByCat[s.cat]}">
+        <div class="swatch-bar"></div>
+        <div class="card-front-body">
+          <div class="ref-code">${s.code}</div>
+          <div class="monogram">${s.letter}</div>
+          <div class="card-title">${s.title}</div>
+          <p class="card-desc">${s.desc}</p>
+          <div class="card-front-footer">
+            <span class="tag">${s.catLabel}</span>
+            <span class="flip-hint">retourner ↻</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-face card-back" style="--accent:${accentByCat[s.cat]}">
+        <div>
+          <div class="ref-code">${s.code}</div>
+          <h4>${s.title}</h4>
+          <ul class="spec-list">
+            <li><b>Formats</b><span>${s.formats}</span></li>
+            <li><b>Délai</b><span>${s.delai}</span></li>
+            <li><b>Idéal pour</b><span>${s.ideal}</span></li>
+          </ul>
+        </div>
+        <a class="cta-mini" href="mailto:contact@votre-studio.com?subject=Devis%20-%20${encodeURIComponent(s.title)}">Demander un devis</a>
+      </div>
+    </div>
+  `;
+
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  gallery.appendChild(card);
+});
+
+// Filtres
+document.getElementById('filters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.card').forEach(card => {
+    const show = filter === 'tous' || card.dataset.cat === filter;
+    card.classList.toggle('hidden', !show);
+  });
+});
+
+// Apparition au scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.card').forEach(card => observer.observe(card));
+</script>
+
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Contactez nous</span>
+        <h2 class="section-title white">Traivaillons ensemble</h2>
+        <p class="contact-desc">Prêt pour transformer votre business avec les nouvelles technologies ? Laissez-nous nous en occuper pour vous.</p>
+        <div class="contact-details">
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Niamey-Niger</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>contactnexeliumtech@gmail.com</span></div>
+          <div class="contact-item"><i class="fas fa-phone"></i><span>+227 95 98 91 96</span></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><span>H24</span></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Votre nom</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Adress email</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Sujet</label>
+          <input type="text" placeholder="Comment pouvons-nous vous aider ?" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Dites nous à propos de votre projet..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          Envoyer le message <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i> Message envoyé avec succès! Nous vous repondrons bientôt.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/logo_nexe-removebg-preview.png" alt="Logo Nexelium Tech" class="logo-icon" />
+          <div class="logo-text">
+            <strong>Nexelium Tech</strong>
+            <span>Entreprise numérique</span>
+          </div>
+        </a>
+        <p>Des solutions informatiques intelligentes et évolutives pour aider votre entreprise à se développer, à innover et à réussir à l'ère du numérique.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Développement de logiciels</a></li>
+          <li><a href="#">Solutions cloud</a></li>
+          <li><a href="#">Design UI/UX</a></li>
+          <li><a href="#">Transformation numérique</a></li>
+          <li><a href="#">Conseil en informatique</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Restez informé de nos dernières actualités et offres.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button class="btn btn-primary">S'abonner</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tous droits réservés par Nexelium Tech.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
